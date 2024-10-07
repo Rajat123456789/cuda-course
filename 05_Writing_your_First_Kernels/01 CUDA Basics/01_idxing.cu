@@ -25,8 +25,9 @@ __global__ void whoami(void) {
 }
 
 int main(int argc, char **argv) {
-    const int b_x = 2, b_y = 3, b_z = 4;
-    const int t_x = 4, t_y = 4, t_z = 4; // the max warp size is 32, so 
+    const int b_x = 2, b_y = 3, b_z = 4; // grid dimension
+    const int t_x = 4, t_y = 4, t_z = 4; //block dimension
+    // the max warp size is 32, so 
     // we will get 2 warp of 32 threads per block
 
     int blocks_per_grid = b_x * b_y * b_z;

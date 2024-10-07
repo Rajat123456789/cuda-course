@@ -9,6 +9,15 @@ int main() {
     int* ptr2 = arr2;
     int* matrix[] = {ptr1, ptr2};
 
+    //print ptr1
+    printf("ptr1: %p\n", ptr1);
+
+    for (int i = 0; i < 4; i++) {
+        printf("%d ", *ptr1++);
+    }
+
+    printf("\n");
+    
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 4; j++) {
             printf("%d ", *matrix[i]++);
